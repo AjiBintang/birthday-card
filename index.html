@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Untuk Frida — Happy Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Italianno&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="locked">
+    <canvas id="bgCanvas"></canvas>
+    <canvas id="confettiCanvas"></canvas>
+    <audio id="bgMusic" loop preload="auto">
+      <source src="/assets/music/hbd.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="balloonLayer"></div>
+
+    <!-- INTRO -->
+    <div id="introScreen">
+      <div class="intro-inner">
+        <p class="intro-text">Ssst… ada kiriman kecil untuk Frida ✉</p>
+      </div>
+    </div>
+
+    <!-- ENVELOPE -->
+    <section id="envelopeScreen">
+      <div class="env-wrap" id="envWrap">
+        <div class="envelope" id="envelope">
+          <div class="env-body"></div>
+          <div class="env-letter"></div>
+          <div class="env-front"></div>
+          <div class="env-flap"></div>
+          <button class="seal" id="seal" aria-label="Ketuk untuk membuka surat">
+            <span class="seal-f">F</span>
+          </button>
+        </div>
+        <p class="env-hint">Ketuk segel untuk membuka suratnya ✦</p>
+      </div>
+    </section>
+
+    <!-- MAIN CARD -->
+    <main id="cardScreen" aria-hidden="true">
+      <section class="hero">
+        <svg class="corner tl" viewBox="0 0 100 100">
+          <path d="M6 94 C6 42, 42 6, 94 6" />
+          <path d="M20 94 C20 54, 54 20, 94 20" />
+        </svg>
+        <svg class="corner tr" viewBox="0 0 100 100">
+          <path d="M6 94 C6 42, 42 6, 94 6" />
+          <path d="M20 94 C20 54, 54 20, 94 20" />
+        </svg>
+        <svg class="corner bl" viewBox="0 0 100 100">
+          <path d="M6 94 C6 42, 42 6, 94 6" />
+          <path d="M20 94 C20 54, 54 20, 94 20" />
+        </svg>
+        <svg class="corner br" viewBox="0 0 100 100">
+          <path d="M6 94 C6 42, 42 6, 94 6" />
+          <path d="M20 94 C20 54, 54 20, 94 20" />
+        </svg>
+        <p class="eyebrow">Sebuah surat kecil untuk</p>
+        <h1 class="name-script">Frida</h1>
+        <p class="hero-sub">— Happy Birthday🎂 —</p>
+        <div class="divider"></div>
+      </section>
+
+      <section class="message reveal">
+        <p>Di antara banyaknya hari dalam setahun, hari ini rasanya punya alasan tersendiri untuk dirayakan lebih spesial. Hari ketika seseorang yang berharga lahir dan terus bertumbuh menjadi pribadi yang sekarang.</p>
+
+        <p>
+          Semoga di usia yang baru ini, lebih banyak hal baik yang datang dan lebih banyak kebahagiaan yang menetap. Semoga apa yang sedang diusahakan perlahan menemukan jalannya, apa yang sedang diharapkan datang di waktu yang tepat, dan
+          apa yang terasa berat bisa menjadi lebih ringan untuk dijalani.
+        </p>
+
+        <p>
+          Semoga apa yang pernah hilang digantikan dengan hal-hal baik yang datang di waktu yang tepat. Semoga setiap kekecewaan perlahan berubah menjadi pelajaran yang membuat semakin kuat, setiap keraguan berubah menjadi keberanian untuk
+          terus melangkah, dan semoga hati selalu diberi ketenangan untuk menerima apa yang memang harus pergi serta mensyukuri apa yang masih ada dan yang akan datang.
+        </p>
+
+        <p>
+          Nggak perlu buru-buru mengejar semuanya. Nikmati juga setiap prosesnya, karena setiap langkah kecil tetap punya arti. Semoga tahun ini dipenuhi lebih banyak hal yang bikin tersenyum, lebih banyak orang baik yang hadir dan tetap
+          tinggal, serta lebih banyak momen sederhana yang tanpa disadari nantinya menjadi kenangan paling berharga.
+        </p>
+
+        <p>
+          Dan kalau suatu saat hari terasa berat, jangan lupa kalau ada banyak orang yang peduli di sekitar. Ada keluarga yang selalu mendoakan, teman yang siap menemani, dan sahabat yang mungkin tidak selalu terlihat, tapi tetap ingin
+          melihat lu baik-baik aja. Jadi, jangan merasa harus menghadapi semuanya sendirian. Ada orang-orang yang mungkin tidak selalu punya jawaban untuk setiap masalah, tapi akan selalu ada untuk menemani, mendengarkan, dan mengingatkan
+          bahwa perjalanan ini ga harus dilalui sendiri.
+        </p>
+
+        <p>
+          Terima kasih sudah bertahan sampai sejauh ini, melewati hari-hari yang mungkin tidak selalu mudah. Semoga ke depannya lebih banyak kebahagiaan yang datang, lebih banyak hal baik yang ditemukan, dan lebih banyak alasan untuk
+          tersenyum.
+        </p>
+
+        <p>Selamat bertambah usia, Prii. Semoga tahun ini menjadi salah satu bab terbaik dalam perjalanan hidup lu. Semoga selalu diberi kesehatan, ketenangan, dan kebahagiaan yang sederhana tapi bermakna. (●'◡'●)</p>
+      </section>
+
+      <section class="appreciations reveal">
+        <h2 class="section-title">Untuk Frida, dengan terima kasih</h2>
+        <ul class="app-list">
+          <li><span class="motif">✦</span> Makasih sudah menjadi seseorang yang punya energi positif dengan caranya sendiri.</li>
+          <li><span class="motif">✦</span> Makasih untuk kebaikan dan hal-hal kecil yang mungkin nggak selalu disadari, tapi tetap punya arti.</li>
+          <li><span class="motif">✦</span> Makasih sudah terus berjalan sejauh ini, belajar dari banyak hal, dan tetap berusaha menjadi versi terbaik dari diri sendiri.</li>
+          <li><span class="motif">✦</span> Makasih untuk cara sederhana dalam menghargai orang lain dan membuat kesan yang baik.</li>
+        </ul>
+      </section>
+
+      <section class="letter-closing reveal" id="letterClosing">
+        <p class="closing-line">
+          Semoga tahun ini membawa lebih banyak alasan untuk tertawa lepas, lebih sedikit hal yang perlu dikhawatirkan, dan selalu dikelilingi oleh orang-orang baik yang tulus. Karena seperti halnya kebaikan yang diberikan kepada orang
+          lain, semoga hal-hal baik juga selalu menemukan jalannya kembali.
+        </p>
+        <p class="sig-block">Dengan harapan baik dan doa-doa kecil untukmu,<br /><span class="sig-name">Aji Bintang P.</span></p>
+        <button class="cake-btn-announce" id="cakeAnnounce">🎂 &nbsp;Oh ya… ada kue untukmu di sini!</button>
+      </section>
+    </main>
+
+    <!-- CAKE SCENE -->
+    <div id="cakeScene">
+      <h2 class="cs-title">Kue Ulang Tahun untuk Frida 🎂</h2>
+      <p class="cs-sub">Tutup mata, tarik napas dalam, lalu tiup lilinnya…</p>
+      <button class="cake-btn" id="cakeBtn" aria-label="Tiup lilin">
+        <svg viewBox="0 0 220 185" xmlns="http://www.w3.org/2000/svg">
+          <!-- bottom tier -->
+          <rect x="8" y="116" width="204" height="62" rx="10" fill="#FBF5E8" stroke="#C49A3C" stroke-width="2.5" />
+          <rect x="8" y="116" width="204" height="18" rx="10" fill="#EDD89A" />
+          <path d="M8 134 Q32 122 56 134 T104 134 T152 134 T200 134 T212 134" fill="none" stroke="#D4A0A8" stroke-width="3.5" stroke-linecap="round" />
+          <!-- dots -->
+          <circle cx="44" cy="148" r="4" fill="#D4A0A8" opacity=".7" />
+          <circle cx="80" cy="155" r="3.5" fill="#C49A3C" opacity=".6" />
+          <circle cx="116" cy="148" r="4" fill="#D4A0A8" opacity=".7" />
+          <circle cx="152" cy="155" r="3.5" fill="#C49A3C" opacity=".6" />
+          <circle cx="176" cy="148" r="4" fill="#D4A0A8" opacity=".7" />
+          <!-- top tier -->
+          <rect x="38" y="62" width="144" height="58" rx="9" fill="#FBF5E8" stroke="#C49A3C" stroke-width="2" />
+          <rect x="38" y="62" width="144" height="15" rx="9" fill="#EDD89A" />
+          <path d="M38 77 Q58 67 78 77 T118 77 T158 77 T182 77" fill="none" stroke="#D4A0A8" stroke-width="2.5" stroke-linecap="round" />
+          <!-- candles -->
+          <rect x="79" y="38" width="7" height="28" rx="3" fill="#7B2D3A" />
+          <rect x="106.5" y="30" width="7" height="36" rx="3" fill="#C49A3C" />
+          <rect x="134" y="38" width="7" height="28" rx="3" fill="#7B2D3A" />
+          <!-- glow (blurred flames behind) -->
+          <ellipse class="flame glow f1" cx="82.5" cy="31" rx="11" ry="14" fill="#ffcc66" />
+          <ellipse class="flame glow f2" cx="110" cy="22" rx="11" ry="14" fill="#ffcc66" />
+          <ellipse class="flame glow f3" cx="137.5" cy="31" rx="11" ry="14" fill="#ffcc66" />
+          <!-- outer flame -->
+          <path class="flame f1" d="M82.5 20 C90 29,91 35,82.5 42 C74 35,75 29,82.5 20Z" fill="#F5632A" />
+          <path class="flame f2" d="M110 10 C118 19,119 26,110 32 C101 26,102 19,110 10Z" fill="#F5632A" />
+          <path class="flame f3" d="M137.5 20 C145 29,146 35,137.5 42 C129 35,130 29,137.5 20Z" fill="#F5632A" />
+          <!-- inner flame highlight -->
+          <path class="flame f1" d="M82.5 25 C86 31,86 35,82.5 40 C79 35,79 31,82.5 25Z" fill="#FFDD44" opacity=".8" />
+          <path class="flame f2" d="M110 15 C114 22,114 27,110 31 C106 27,106 22,110 15Z" fill="#FFDD44" opacity=".8" />
+          <path class="flame f3" d="M137.5 25 C141 31,141 35,137.5 40 C134 35,134 31,137.5 25Z" fill="#FFDD44" opacity=".8" />
+          <!-- smoke -->
+          <ellipse class="smoke-puff" cx="82.5" cy="12" rx="6" ry="8" fill="#c8c0b4" />
+          <ellipse class="smoke-puff" cx="110" cy="2" rx="6" ry="8" fill="#c8c0b4" />
+          <ellipse class="smoke-puff" cx="137.5" cy="12" rx="6" ry="8" fill="#c8c0b4" />
+        </svg>
+      </button>
+      <p class="cake-hint" id="cakeHint">Ketuk kuenya untuk meniup lilin 🌬️</p>
+      <div class="wish-msg" id="wishMsg">
+        <span class="wish-star">✨</span>
+        &nbsp;Semoga semua harapanmu terkabul, Frida&nbsp;
+        <span class="wish-star">✨</span>
+      </div>
+    </div>
+
+    <!-- GIFT SCENE -->
+    <div id="giftScene">
+      <h2 class="gs-title">Lilinnya padam~ 🌬️✨</h2>
+      <p class="gs-sub">Ada sesuatu buat lu nih Piw…</p>
+      <div class="gift-wrap" id="giftWrap" role="button" tabindex="0" aria-label="Buka kotak hadiah">
+        <svg viewBox="0 0 220 215" xmlns="http://www.w3.org/2000/svg">
+          <!-- box body -->
+          <rect x="22" y="118" width="176" height="90" rx="7" fill="#FBF5E8" stroke="#C49A3C" stroke-width="2.5" />
+          <!-- ribbon v -->
+          <rect x="97" y="118" width="26" height="90" fill="#7B2D3A" opacity=".55" rx="4" />
+          <!-- ribbon h -->
+          <rect x="22" y="148" width="176" height="22" fill="#7B2D3A" opacity=".55" rx="4" />
+          <!-- shine on box -->
+          <rect class="box-shine" x="30" y="126" width="60" height="6" rx="3" fill="white" opacity=".0" />
+          <!-- lid group -->
+          <g class="gift-lid-g">
+            <rect x="14" y="88" width="192" height="34" rx="7" fill="#CE99A0" stroke="#C49A3C" stroke-width="2.5" />
+            <!-- lid ribbon -->
+            <rect x="97" y="88" width="26" height="34" fill="#7B2D3A" opacity=".6" rx="4" />
+            <!-- bow left -->
+            <path d="M110 87 C90 72, 72 76, 76 88 C80 96, 102 89, 110 87Z" fill="#7B2D3A" opacity=".85" />
+            <!-- bow right -->
+            <path d="M110 87 C130 72, 148 76, 144 88 C140 96, 118 89, 110 87Z" fill="#7B2D3A" opacity=".85" />
+            <!-- bow center -->
+            <circle cx="110" cy="87" r="8" fill="#5C1E2A" />
+            <circle cx="110" cy="87" r="5" fill="#CE99A0" />
+            <circle cx="110" cy="87" r="3" fill="#7B2D3A" opacity=".8" />
+          </g>
+        </svg>
+        <!-- gift message -->
+        <div class="gift-msg-wrap" id="giftMsg">
+          <div class="gift-msg-box">🎁 gua udah nyiapin hadiah kecil buat lu prii, Hadiahnya menyusul<br />nanti ya, semoga suka~ 🌸</div>
+        </div>
+      </div>
+      <p class="gs-hint" id="gsHint">Ketuk kotak hadiahnya untuk membuka ✨</p>
+    </div>
+
+    <button class="music-btn" id="musicBtn" aria-label="Toggle musik" aria-pressed="true">
+      <svg viewBox="0 0 24 24">
+        <circle class="bar" cx="7" cy="18" r="2.4" fill="var(--wine2)" stroke="none" />
+        <circle class="bar" cx="17" cy="16" r="2.4" fill="var(--wine2)" stroke="none" />
+        <path class="bar" d="M9 18V7.5L19 5.5V16" stroke-width="1.8" />
+        <path class="bar bar2" d="M3 12c1.4-2 2.2-2 3.6 0" stroke-width="1.3" stroke-linecap="round" />
+        <path class="bar bar3" d="M1.5 9.2c2.2-3.2 3.6-3.2 5.8 0" stroke-width="1.3" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
